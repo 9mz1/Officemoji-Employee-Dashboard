@@ -84,7 +84,7 @@ i {
     grid-template-rows: 1fr 2fr;
     gap: 22px;
     background-color: var(--tertiary);
-    /* box-shadow: 0px 10px; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .header > .top {
@@ -179,10 +179,10 @@ i {
 .main {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    border: 2px solid red;
-    margin: 10px 12px;
+    /* border: 2px solid red; */
+    margin: 22px 12px;
     justify-content: center;
-    gap: 20px;
+    gap: 24px;
 }
 
 .main > .main-left {
@@ -211,8 +211,9 @@ i {
     padding: 22px 28px;
     border-left: 8px solid var(--primary);
     border-radius: 12px;
-    box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background-color: var(--tertiary);
+    overflow: hidden;
 }
 
 .card > .icons {
@@ -221,5 +222,31 @@ i {
 }
 
 .main-right {
-    
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.main-right > .announcements, .main-right > .notifications {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.announcements > h3, .notifications > h3 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.announcements > .card, .notifications > .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 30px;
+    gap: 20px;
+    font-size: 14px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 12px;
+    background-color: var(--tertiary);
+    overflow: hidden;
 }
