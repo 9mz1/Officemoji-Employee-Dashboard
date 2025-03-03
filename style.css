@@ -14,14 +14,14 @@
 
 body {
     min-height: 100vh;
-    background-color: var(--tertiary);
+    background-color: #ecf1f5;
     color: var(--secondary);
     font-family: 'Quicksand', sans-serif;
+    /* overflow: hidden; */
 
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: auto 4fr;
-    gap: 12px;
+    /* gap: 12px; */
 }
 
 ul {
@@ -48,6 +48,7 @@ i {
 
 
 .sidebar {
+    grid-row: 1 / 3;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -82,13 +83,15 @@ i {
     display: grid;
     grid-template-rows: 1fr 2fr;
     gap: 22px;
-    padding: 0 28px;
+    background-color: var(--tertiary);
+    /* box-shadow: 0px 10px; */
 }
 
 .header > .top {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 40px;
     margin-top: 20px;
     font-size: 20px;
 }
@@ -103,7 +106,6 @@ i {
 
 .header .top .search-bar > input {
     width: 850px;
-    /* height: 30px; */
     padding: 8px 10px;
     border-radius: 20px;
     border: 1px solid var(--secondary);
@@ -138,6 +140,7 @@ i {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 40px;
 }
 
 .header .bottom > .name {
@@ -171,4 +174,52 @@ i {
     align-items: center;
     justify-content: center;
     gap: 30px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    border: 2px solid red;
+    margin: 10px 12px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.main > .main-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+}
+
+.main-left > h3 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.cards > .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;   
+    padding: 22px 28px;
+    border-left: 8px solid var(--primary);
+    border-radius: 12px;
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
+    background-color: var(--tertiary);
+}
+
+.card > .icons {
+    align-self: flex-end;
+    font-size: 20px;
+}
+
+.main-right {
+    
 }
