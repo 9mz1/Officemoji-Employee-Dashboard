@@ -37,13 +37,28 @@ button {
     border-radius: 28px;
     color: var(--tertiary);
     background-color: var(--primary);
-    border: 2px solid var(--primary);
+    border: 3px solid var(--primary);
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
+    transition: ease 0.3s;
+}
+button:hover {
+    color: var(--secondary);
+    background-color: var(--tertiary);
 }
 
 i {
-    cursor: pointer;
+    cursor: pointer;    
+}
+
+.hov {
+    border-radius: 50%;
+    padding: 10px 10px;
+    transition: ease 0.3s;
+}
+.hov:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
 
@@ -73,10 +88,21 @@ i {
 .sidebar ul > div {
     display: flex;
     align-items: center;
+    padding: 12px 8px;
+    border-radius: 8px;
     font-size: 18px;
     font-weight: 500;
     gap: 15px;
     cursor: pointer;
+    transition: ease 0.3s;
+}
+.sidebar ul > div:hover {
+    color: var(--tertiary);
+}
+
+.sidebar .main-controls > #home {
+    color: var(--tertiary);
+    background-color: var(--secondary);
 }
 
 .header {
@@ -116,6 +142,10 @@ i {
     font-weight: 500;
 }
 .header .top .search-bar > input:focus {
+    border: none;
+    outline: 2px solid var(--primary);
+}
+.header .top .search-bar > input:hover {
     border: none;
     outline: 2px solid var(--primary);
 }
@@ -240,7 +270,6 @@ i {
 .announcements > .card, .notifications > .card {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     padding: 24px 30px;
     gap: 20px;
